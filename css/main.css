@@ -1,0 +1,158 @@
+@font-face {
+  font-family: "Playfair Display";
+  font-weight: 400;
+  font-style: normal;
+  src: url("https://fonts.shopifycdn.com/playfair_display/playfairdisplay_n4.9cf7fc4f6a5a48eb27738cad395f0eba18922755.woff2?h1=Z3d5bGxlbS5jb20uYXU&h2=Z3d5bGxlbS5jb20&hmac=8688b73df35e43977e1db38c3cdbccb7a24972060100dfc8cda4824e36e20f20") format("woff2"),
+       url("https://fonts.shopifycdn.com/playfair_display/playfairdisplay_n4.8a3fef162b1f576396eb89e46872ef50eeb08158.woff?h1=Z3d5bGxlbS5jb20uYXU&h2=Z3d5bGxlbS5jb20&hmac=834682e81da83059559b5c12bcb78d8f06d010a38bc49d3c45ad85aa35cf22e8") format("woff");
+}
+
+@font-face {
+  font-family: Lato;
+  font-weight: 700;
+  font-style: normal;
+  src: url("https://fonts.shopifycdn.com/lato/lato_n7.f0037142450bd729bdf6ba826f5fdcd80f2787ba.woff2?h1=Z3d5bGxlbS5jb20uYXU&h2=Z3d5bGxlbS5jb20&hmac=1ffb368b3541d41bd64b0883560be5228d3466327d41303fe508aa10a675f227") format("woff2"),
+       url("https://fonts.shopifycdn.com/lato/lato_n7.50161a3d4f05d049b7407d86c5a8834e4d6e29bf.woff?h1=Z3d5bGxlbS5jb20uYXU&h2=Z3d5bGxlbS5jb20&hmac=704fe178cea6e24e1592578003e186efb74c4f410fef1b45e26966e3e92bf0d5") format("woff");
+}
+
+body {
+    text-align: center;
+    font-family: Lato, sans-serif;
+}
+
+h1, h2, h3, h4 {
+    font-family: "Playfair Display", serif;
+    /*line-height: 200%;*/
+    /*margin: 1em 0 0 0;*/
+}
+
+h3 {
+    background-color: #fff5f5;
+    padding: .5em;
+}
+
+a:link,
+a:visited {
+    color: #ff6d6d;
+}
+
+
+a:hover,
+a:focus,
+a:active {
+    color: #ab2c2c;
+}
+
+.logo {
+    position: relative;
+    float: left;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1180px;
+}
+
+.row {
+    width: 100%;
+    margin-bottom: 1em;
+    position: relative;
+    float: left;
+}
+
+.left {
+    float: left;
+    width: 500px;
+    margin-right: 20px;
+}
+
+.right {
+    float: left;
+    width: 650px;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.doll {
+    position: relative;
+}
+
+    .model {
+        background: url(../images/model-and-backdrop.png) no-repeat top left;
+        background-size: 100% 100%;
+        width: 500px;
+        height: 750px;
+        position: relative;
+        top: 0;
+    }
+
+    .top_container {
+        background: url(../images/top-layer-00_swatch-1.png) top left;
+        background-size: 10% 10%;
+        width: 220px;
+        height: 250px;
+        left: 150px;
+        top: 130px;
+        position: absolute;
+    }
+
+    .skirt_container {
+        background: url(../images/skirt-layer-1_cool.png) top left;
+        background-size: 100% 100%;
+        width: 220px;
+        height: 220px;
+        left: 150px;
+        top: 360px;
+        position: absolute;
+    }
+
+.switchers {
+    position: relative;
+}
+
+.top_swatches {
+}
+
+.top_switch,
+.skirt_switch {
+    background-color: #eee;
+    border-radius: 5px;
+    margin: 4px 2px;
+    font-weight: bold;
+}
+
+.top_switch[selected="selected"] {
+    background-color: #999;
+    color: #fff;
+}
+
+.top_swatch {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    margin-top: 2px;
+}
+
+.skirt_swatch {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    margin-top: 2px
+}
+
+.swatch_cards {
+    clear: both;
+
+}
+
+.swatch_card {
+    width: 20%;
+    margin: 20px;
+    display: inline-block;
+    position: relative;
+}
