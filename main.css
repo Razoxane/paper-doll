@@ -83,7 +83,7 @@ a:active {
 }
 
     .model {
-        background: url(../images/model-and-backdrop.png) no-repeat top left;
+        background: url(images/model-and-backdrop.png) no-repeat top left;
         background-size: 100% 100%;
         width: 500px;
         height: 750px;
@@ -92,7 +92,7 @@ a:active {
     }
 
     .top_container {
-        background: url(../images/top-layer-00_swatch-1.png) top left;
+        background: url(images/top-layer-00_swatch-1.png) top left;
         background-size: 10% 10%;
         width: 220px;
         height: 250px;
@@ -102,7 +102,7 @@ a:active {
     }
 
     .skirt_container {
-        background: url(../images/skirt-layer-1_cool.png) top left;
+        background: url(images/skirt-layer-1_cool.png) top left;
         background-size: 100% 100%;
         width: 220px;
         height: 220px;
@@ -119,11 +119,25 @@ a:active {
 }
 
 .top_switch,
-.skirt_switch {
+.skirt_switch,
+.save {
     background-color: #eee;
     border-radius: 5px;
     margin: 4px 2px;
     font-weight: bold;
+}
+
+.save {
+    margin-top: 10px ;
+    padding: 10px;
+    background-color: #ab2c2c;
+    color: #fff;
+}
+
+.save:hover,
+.save:focus
+.save:active {
+    background-color: #ff6d6d;
 }
 
 .top_switch[selected="selected"] {
