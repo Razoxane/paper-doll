@@ -1,0 +1,373 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Gwyllem Mix & Match Paper Doll</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+
+
+
+        <style>
+
+            @font-face {
+              font-family: "Playfair Display";
+              font-weight: 400;
+              font-style: normal;
+              src: url("https://fonts.shopifycdn.com/playfair_display/playfairdisplay_n4.9cf7fc4f6a5a48eb27738cad395f0eba18922755.woff2?h1=Z3d5bGxlbS5jb20uYXU&h2=Z3d5bGxlbS5jb20&hmac=8688b73df35e43977e1db38c3cdbccb7a24972060100dfc8cda4824e36e20f20") format("woff2"),
+                   url("https://fonts.shopifycdn.com/playfair_display/playfairdisplay_n4.8a3fef162b1f576396eb89e46872ef50eeb08158.woff?h1=Z3d5bGxlbS5jb20uYXU&h2=Z3d5bGxlbS5jb20&hmac=834682e81da83059559b5c12bcb78d8f06d010a38bc49d3c45ad85aa35cf22e8") format("woff");
+            }
+
+          @font-face {
+              font-family: Lato;
+              font-weight: 700;
+              font-style: normal;
+              src: url("https://fonts.shopifycdn.com/lato/lato_n7.f0037142450bd729bdf6ba826f5fdcd80f2787ba.woff2?h1=Z3d5bGxlbS5jb20uYXU&h2=Z3d5bGxlbS5jb20&hmac=1ffb368b3541d41bd64b0883560be5228d3466327d41303fe508aa10a675f227") format("woff2"),
+                   url("https://fonts.shopifycdn.com/lato/lato_n7.50161a3d4f05d049b7407d86c5a8834e4d6e29bf.woff?h1=Z3d5bGxlbS5jb20uYXU&h2=Z3d5bGxlbS5jb20&hmac=704fe178cea6e24e1592578003e186efb74c4f410fef1b45e26966e3e92bf0d5") format("woff");
+            }
+
+
+            body {
+                text-align: center;
+                font-family: Lato, sans-serif;
+            }
+
+            h1, h2, h3, h4 {
+                font-family: "Playfair Display", serif;
+                /*line-height: 200%;*/
+                /*margin: 1em 0 0 0;*/
+            }
+
+            h3 {
+                background-color: #fff5f5;
+                padding: .5em;
+            }
+
+            a:link,
+            a:visited {
+                color: #ff6d6d;
+            }
+
+
+            a:hover,
+            a:focus,
+            a:active {
+                color: #ab2c2c;
+            }
+
+            .logo {
+                position: relative;
+                float: left;
+            }
+
+            .container {
+                margin: 0 auto;
+                width: 1180px;
+            }
+
+            .row {
+                width: 100%;
+                margin-bottom: 1em;
+                position: relative;
+                float: left;
+            }
+
+            .left {
+                float: left;
+                width: 500px;
+                margin-right: 20px;
+            }
+
+            .right {
+                float: left;
+                width: 650px;
+            }
+
+            .text-left {
+                text-align: left;
+            }
+
+            .text-right {
+                text-align: right;
+            }
+
+            .doll {
+                position: relative;
+            }
+
+                .model {
+                    background: url(images/model-and-backdrop.png) no-repeat top left;
+                    background-size: 100% 100%;
+                    width: 500px;
+                    height: 750px;
+                    position: relative;
+                    top: 0;
+                }
+
+                .top_container {
+                    background: url(images/top-layer-00_swatch-1.png) top left;
+                    background-size: 10% 10%;
+                    width: 220px;
+                    height: 250px;
+                    left: 150px;
+                    top: 130px;
+                    position: absolute;
+                }
+
+                .skirt_container {
+                    background: url(images/skirt-layer-1_cool.png) top left;
+                    background-size: 100% 100%;
+                    width: 220px;
+                    height: 220px;
+                    left: 150px;
+                    top: 360px;
+                    position: absolute;
+                }
+
+            .switchers {
+                position: relative;
+            }
+
+            .top_swatches {
+            }
+
+            .top_switch,
+            .skirt_switch {
+                background-color: #eee;
+                border-radius: 5px;
+                margin: 4px 2px;
+                font-weight: bold;
+            }
+
+            .top_switch[selected="selected"] {
+                background-color: #999;
+                color: #fff;
+            }
+
+            .top_swatch {
+                width: 30px;
+                height: 30px;
+                border-radius: 5px;
+                margin-top: 2px;
+            }
+
+            .skirt_swatch {
+                width: 30px;
+                height: 30px;
+                border-radius: 5px;
+                margin-top: 2px
+            }
+
+            .swatch_cards {
+                clear: both;
+
+            }
+
+            .swatch_card {
+                width: 20%;
+                margin: 20px;
+                display: inline-block;
+                position: relative;
+            }
+        </style>
+    </head>
+    <body>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <div class="container">
+            <div class="row">
+                <a href="https://gwyllem.com.au/"><img class="logo" width="250" height="100" src="images/shopify_logo_ethically_made_02_800x.png"></a>
+                <p class="text-right">Designed for Gwyllem by <a href="https://jadeedward.com/">Jade Edward</a></p>
+            </div>
+
+            <div class="row">
+                <h1>Paper Doll</h1>
+                <p>Mix and match the top and skirt colours to decide which fabrics to order!</p>
+            </div>
+
+
+            <div class="row">
+                <div class="left">
+                    <h2>Model</h2>
+                    <div class="doll">
+                        <div class="top_container"></div>
+                        <div class="skirt_container"></div>
+                        <div class="model"></div>
+                    </div>
+                </div>
+
+                <div class="right">
+                    <h2>Swatches</h2>
+
+                    <h3>Skirt Swatches</h3>
+                    <div class="swatches skirt_swatches">
+                        <button class="skirt_switch"><img class="skirt_swatch" src="images/skirt-layer-1_cool.png" alt="Cool"><br>Cool</button>
+                        <button class="skirt_switch"><img class="skirt_swatch" src="images/skirt-layer-2_warm.png" alt="Warm"><br>Warm</button>
+                    </div>
+
+                    <h3>Top Swatches</h3>
+                    <div class="top top_swatches">
+                        <button selected="selected" class="top_switch"><img class="top_swatch" src="images/top-layer-00_swatch-1.png"><br>1</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-01_swatch-2.png"><br>2</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-02_swatch-3.png"><br>3</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-03_swatch-4.png"><br>4</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-04_swatch-5.png"><br>5</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-05_swatch-6.png"><br>6</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-06_swatch-7.png"><br>7</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-07_swatch-8.png"><br>8</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-08_swatch-9.png"><br>9</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-09_swatch-10.png"><br>10</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-10_swatch-11.png"><br>11</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-11_swatch-12.png"><br>12</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-12_swatch-13.png"><br>13</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-13_swatch-14.png"><br>14</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-14_swatch-15.png"><br>15</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-15_swatch-16.png"><br>16</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-16_swatch-17.png"><br>17</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-17_swatch-19.png"><br>19</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-18_swatch-20.png"><br>20</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-19_swatch-21.png"><br>21</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-20_swatch-22.png"><br>22</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-21_swatch-23.png"><br>23</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-22_swatch-24.png"><br>24</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-23_swatch-25.png"><br>25</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-24_swatch-26.png"><br>26</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-25_swatch-27.png"><br>27</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-26_swatch-29.png"><br>29</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-27_swatch-30.png"><br>30</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-28_swatch-31.png"><br>31</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-29_swatch-32.png"><br>32</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-30_swatch-33.png"><br>33</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-31_swatch-34.png"><br>34</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-32_swatch-36.png"><br>36</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-33_swatch-37.png"><br>37</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-34_swatch-39.png"><br>39</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-35_swatch-40.png"><br>40</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-36_swatch-41.png"><br>41</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-37_swatch-42.png"><br>42</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-38_swatch-43.png"><br>43</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-39_swatch-44.png"><br>44</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-40_swatch-45.png"><br>45</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-41_swatch-46.png"><br>46</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-42_swatch-47.png"><br>47</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-43_swatch-48.png"><br>48</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-44_swatch-49.png"><br>49</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-45_swatch-50.png"><br>50</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-46_swatch-51.png"><br>51</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-47_swatch-52.png"><br>52</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-48_swatch-53.png"><br>53</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-49_swatch-54.png"><br>54</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-50_swatch-55.png"><br>55</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-51_swatch-56.png"><br>56</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-52_swatch-57.png"><br>57</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-53_swatch-58.png"><br>58</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-54_swatch-59.png"><br>59</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-55_swatch-60.png"><br>60</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-56_swatch-61.png"><br>61</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-57_swatch-62.png"><br>62</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-58_swatch-63.png"><br>63</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-59_swatch-65.png"><br>65</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-60_swatch-66.png"><br>66</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-61_swatch-69.png"><br>69</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-62_swatch-70.png"><br>70</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-63_swatch-71.png"><br>71</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-64_swatch-72.png"><br>72</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-65_swatch-74.png"><br>74</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-66_swatch-75.png"><br>75</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-67_swatch-76.png"><br>76</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-68_swatch-77.png"><br>77</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-69_swatch-78.png"><br>78</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-70_swatch-79.png"><br>79</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-71_swatch-80.png"><br>80</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-72_swatch-81.png"><br>81</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-73_swatch-84.png"><br>84</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-74_swatch-85.png"><br>85</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-75_swatch-86.png"><br>86</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-76_swatch-87.png"><br>87</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-77_swatch-88.png"><br>88</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-78_swatch-89.png"><br>89</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-79_swatch-90.png"><br>90</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-80_swatch-91.png"><br>91</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-81_swatch-92.png"><br>92</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-82_swatch-93.png"><br>93</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-83_swatch-94.png"><br>94</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-84_swatch-95.png"><br>95</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-85_swatch-96.png"><br>96</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-86_swatch-97.png"><br>97</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-87_swatch-98.png"><br>98</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-88_swatch-99.png"><br>99</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-89_swatch-100.png"><br>100</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-90_swatch-101.png"><br>101</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-91_swatch-102.png"><br>102</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-92_swatch-103.png"><br>103</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-93_swatch-104.png"><br>104</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-94_swatch-105.png"><br>105</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-95_swatch-106.png"><br>106</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-96_swatch-107.png"><br>107</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-97_swatch-108.png"><br>108</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-98_swatch-109.png"><br>109</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-99_swatch-110.png"><br>110</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-100_swatch-111.png"><br>111</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-101_swatch-112.png"><br>112</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-102_swatch-113.png"><br>113</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-103_swatch-115.png"><br>115</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-104_swatch-116.png"><br>116</button>
+                        <button class="top_switch"><img class="top_swatch" src="images/top-layer-105_swatch-117.png"><br>117</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="swatch_cards">
+                    <h2>Swatch Cards</h2>
+                    <a href="swatch-card_1-to-32.png"><img class="swatch_card" src="images/swatch-card_1-to-32.png"></a>
+                    <a href="swatch-card_33-to-64.png"><img class="swatch_card" src="images/swatch-card_33-to-64.png"></a>
+                    <a href="swatch-card_65-to-96.png"><img class="swatch_card" src="images/swatch-card_65-to-96.png"></a>
+                    <a href="swatch-card_97-to-117.png"><img class="swatch_card" src="images/swatch-card_97-to-117.png"></a>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <script>
+            $(function() {
+                $('.top_switch').on('click', function(){
+                    $('.top_switch').removeAttr('selected');
+                    $(this).attr('selected', 'selected');
+                    let bg = $($(this).find('img')[0]).attr('src');
+                    $('.top_container').css('background-image','url(' + bg + ')');
+                });
+
+                $('.skirt_switch').on('click', function(){
+                    $('.skirt_switch').removeAttr('selected');
+                    $(this).attr('selected', 'selected');
+                    let bg = $($(this).find('img')[0]).attr('src');
+                    $('.skirt_container').css('background-image','url(' + bg + ')');
+                });
+
+            });
+        </script>
+
+        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+        <script>
+            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+        </script>
+        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+    </body>
+</html>
